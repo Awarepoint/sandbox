@@ -15,7 +15,7 @@ pipeline {
 
         // lock('Deployment')
       }
-      milestone()
+      //milestone()
     }
     stage('last') {
       steps {
