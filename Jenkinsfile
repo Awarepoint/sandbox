@@ -13,7 +13,7 @@ pipeline {
       steps {
         parallel(
           "user input gate": {
-            input 'my message'
+            input 'my message2'
             
           },
           "intermediate step": {
