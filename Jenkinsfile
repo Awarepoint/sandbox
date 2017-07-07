@@ -13,7 +13,7 @@ pipeline {
       steps {
         input 'my message2'
 
-        // lock('Deployment')
+        lock('Deployment')
       }
       //milestone()
     }
