@@ -11,7 +11,6 @@ pipeline {
     }
     stage('user input gate') {
       steps {
-          "user input gate": {
             input 'my message2'
 	milestone()
             lock('Deployment') {
@@ -19,7 +18,6 @@ pipeline {
                 echo "Deploying"
               }   
             }  
-          }
       }
     }
     stage('last') {
