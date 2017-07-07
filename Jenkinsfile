@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        echo "PATH is: $PATH"
         sh './gradlew clean build'
       }
     }
