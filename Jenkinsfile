@@ -11,16 +11,15 @@ pipeline {
     }
     stage('user input gate') {
       steps {
-        parallel(
           "user input gate": {
             input 'my message2'
-            
-          },
-          "intermediate step": {
-            echo 'intermediate'
-            
+	milestone()
+            lock('Deployment') {
+              node {
+                echo "Deploying"
+              }   
+            }  
           }
-        )
       }
     }
     stage('last') {
