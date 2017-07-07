@@ -12,10 +12,9 @@ pipeline {
     stage('user input gate') {
       steps {
         input 'my message2'
-
-        lock('Deployment')
+        milestone(1)
+        //lock('Deployment')
       }
-      //milestone()
     }
     stage('last') {
       steps {
