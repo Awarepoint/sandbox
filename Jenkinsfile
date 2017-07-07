@@ -4,7 +4,9 @@ pipeline {
     stage('build') {
       steps {
         echo "PATH is: $PATH"
-        sh './gradlew clean build'
+        withEnv(['PATH+=/bin']) {
+          sh './gradlew clean build'
+        }
       }
     }
     stage('user input gate') {
