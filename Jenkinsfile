@@ -13,11 +13,7 @@ pipeline {
       steps {
             input 'my message2'
 	milestone()
-            lock('Deployment') {
-              node {
-                echo "Deploying"
-              }   
-            }  
+            lock('Deployment')
       }
     }
     stage('last') {
